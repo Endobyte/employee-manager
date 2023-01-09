@@ -1,0 +1,29 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #f3f4f6;
+}
+
+a {
+  color: #00B7FF;
+}
+
+td {
+  padding: 16px;
+  vertical-align: top;
+  border-bottom: 1px solid #ccc;
+  border-collapse: collapse;
+  color: #4b5563;
+}
+
+table {
+  border-radius: 8px;
+  background-color: white;
+  border-collapse: collapse;
+}
+
+td:first-child, th:first-child {
+  border-left: 1px solid #ccc;
+}
+
+/* start on slide 18 */
