@@ -20,10 +20,53 @@ table {
   border-radius: 8px;
   background-color: white;
   border-collapse: collapse;
+  width: 100%;
 }
 
 td:first-child, th:first-child {
   border-left: 1px solid #ccc;
 }
 
-/* start on slide 18 */
+td:last-child, th:last-child {
+  border-right: 1px solid #ccc;
+}
+
+th {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background-color: #e5e7eb;
+  color: #374151;
+  padding: 8px 16px;
+}
+
+thead {
+  background-color: #e5e7eb;
+}
+
+tr:nth-child(2n) td {
+  background-color: #e5e7eb;
+  color: #1f2937;
+}
+
+.tabletitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.tabletitle a {
+  display: block;
+  background-color: #115e59;
+  color: white;
+  border-radius: 8px;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
