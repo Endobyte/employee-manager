@@ -1,6 +1,6 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px Helvetica, sans-serif;
   background-color: #f3f4f6;
 }
 
@@ -35,7 +35,7 @@ th {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   background-color: #e5e7eb;
-  color: #374151;
+  color: #0051a5;
   padding: 8px 16px;
 }
 
@@ -69,6 +69,11 @@ tr:nth-child(2n) td {
   max-width: 1300px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
 }
 
 .actions {
@@ -113,7 +118,7 @@ tr:nth-child(2n) td {
 .employee-form {
   background: white;
   border-radius: 12px;
-  padding: 20px;
+  padding: 40px;
   max-width: 750px;
 }
 

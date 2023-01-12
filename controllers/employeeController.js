@@ -3,7 +3,11 @@ const jobtitles = ['VP', 'CFO', 'COO', 'CIO', 'CMO', 'PA', 'HRM', 'PRO', 'PM', '
 const states = ['AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY', 'DC', 'GU', 'MH', 'MP', 'PR', 'VI']
 
 module.exports.displayEmployees = async function (req, res) {
-    const employees = await Employee.findAll();
+    const employees = await Employee.findAll({
+        order: [
+            ['id', 'ASC']
+        ]
+    });
     res.render('index', {employees})
 }
 
@@ -20,7 +24,8 @@ module.exports.renderAddEmployeeForm = function (req, res) {
               state: states[0],
               zip: '',
               phonenumber: '',
-              yearhired: ''
+              yearhired: '',
+              salary: ''
             },
             jobtitles,
             stateslist:states
@@ -39,7 +44,8 @@ module.exports.addEmployee = async function (req, res) {
             state:req.body.state,
             zip:req.body.zip,
             phonenumber:req.body.phonenumber,
-            yearhired:req.body.yearhired
+            yearhired:req.body.yearhired,
+            salary:req.body.salary
         }
     );
     res.redirect('/');
@@ -66,7 +72,8 @@ module.exports.updateEmployee = async function (req, res) {
             state:req.body.state,
             zip:req.body.zip,
             phonenumber:req.body.phonenumber,
-            yearhired:req.body.yearhired
+            yearhired:req.body.yearhired,
+            salary:req.body.salary
         },
         {
             where: {
